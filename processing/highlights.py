@@ -77,7 +77,6 @@ def generate_highlights(
     top_n: int = 5,
     clip_padding: float = 4.0,
     max_clip_duration: float = 45.0,
-    source_video: Path | str | None = None,
 ) -> Path:
     transcript_path = Path(transcript_file)
     segments, source_audio = _load_transcript_segments(transcript_path)
@@ -125,7 +124,6 @@ def generate_highlights(
     result = {
         "source_transcript": str(transcript_path),
         "source_audio": source_audio,
-        "source_video": str(source_video) if source_video else None,
         "highlights": [h.__dict__ for h in chosen],
     }
 

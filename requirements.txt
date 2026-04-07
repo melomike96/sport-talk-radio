@@ -1,2 +1,2 @@
-yt-dlp
-openai-whisper
+yt-dlp>=2025.1.26
+openai-whisper>=20250625
